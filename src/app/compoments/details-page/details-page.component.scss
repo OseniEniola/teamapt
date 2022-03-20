@@ -1,0 +1,39 @@
+.details_wrap {
+  margin-top: 6%;
+
+  .filters {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2%;
+    .month {
+      color: #000;
+      font-size: 14px;
+      font-family: "InterSemiBold";
+      letter-spacing: 0.4px;
+      span {
+        color: #dde0e47c;
+        font-size: 9px;
+        font-family: "InterBold";
+      }
+    }
+    .search_wrap{
+        float: right;
+        img{
+            display: inline-block;
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        .month_filter{
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #dde0e47c;
+            border-radius: 20px;
+            select{
+                border: none;
+            }
+        }
+    }
+  }
+}

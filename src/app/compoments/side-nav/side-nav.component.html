@@ -1,0 +1,49 @@
+<div [class.hide]="hide" class="content_wrap">
+    <div class="logo"><img [class.hide]="hide" src="../../../assets/img/logo.svg" alt="">
+        <img [class.hide]="!hide"  (click)="toggleHide()" src="../../../assets/img/menu.png" alt="">
+       <!--  <img [class.hide]="!hide" (click)="toggleHide()" src="../../../assets/img/kebab_icon.svg" alt=""> -->
+        <span [class.hide]="hide" class="bold_text">team</span><span  [class.hide]="hide" class="thin_text">apt</span>
+</div>
+<img [class.hide]="hide" class="collapse" (click)="toggleHide()" src="../../../assets/img/swipe-down.png" alt="">
+<div class="menu_wrap">
+    <ul>
+        <li class="menu_item" [class.active]="active == 'dashboard'" (click)="setActive('dashboard')"><img
+                src="../../../assets/img/dashboard.png" alt="">
+            <p [class.hide]="hide">Dashboard</p>
+        </li>
+        <li class="menu_item" [class.active]="active == 'analytics'" (click)="setActive('analytics')"><img
+                src="../../../assets/img/stats.png" alt="">
+            <p [class.hide]="hide">Analytics</p>
+        </li>
+        <li class="menu_item" [class.active]="active == 'projects'" (click)="setActive('projects')"><img
+                src="../../../assets/img/briefing.png" alt="">
+            <p [class.hide]="hide">Projects</p>
+        </li>
+        <li class="menu_item" [class.active]="active == 'tracking'" (click)="setActive('tracking')"><img
+                src="../../../assets/img/stopwatch.png" alt="">
+            <p [class.hide]="hide">Tracking</p>
+        </li>
+        <li class="menu_item" [class.active]="active == 'history'" (click)="setActive('history')"><img
+                src="../../../assets/img/history.png" alt="">
+            <p [class.hide]="hide">History</p>
+        </li>
+        <li class="menu_item" [class.active]="active == 'settings'" (click)="setActive('settings')"><img
+                src="../../../assets/img/settings.png" alt="">
+            <p [class.hide]="hide">Settings</p>
+        </li>
+    </ul>
+</div>
+
+<div class="create">
+    <div [class.hide]="hide" class="text">Create New Task</div>
+    <img src="../../../assets/img/plus.png" alt="">
+</div>
+<div class="l_userprofile">
+    <div class="avatar" style="background-image: url(../../../assets/img/avatar/beard.png);"></div>
+    <div [class.hide]="hide" class="info">
+        <div class="name">Finna A.</div>
+        <div class="email">finna@ksg.net</div>
+    </div>
+    <img [class.hide]="hide" src="../../../assets/img/arrow_down.png" alt="">
+</div>
+</div>

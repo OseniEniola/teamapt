@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  hide:boolean=false;
   title = 'TeamAPT';
+
+
+  setFromHide(fromHide: boolean) {
+    this.hide = fromHide;
+    console.log(this.hide)
+  }
+  
 }
