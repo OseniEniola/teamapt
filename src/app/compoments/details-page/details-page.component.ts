@@ -25,6 +25,8 @@ import { Plugin as Selection } from 'gantt-schedule-timeline-calendar/dist/plugi
 export class DetailsPageComponent implements OnInit {
   @ViewChild('gstcElement', { static: true }) gstcElement: ElementRef;
   gstc: GSTCResult;
+   staffArray = ['Fred Jon', 'Jon Doe', 'Emily Frost','Damon Smilth', 'Derik Long','Solomon Ding','Camilia Kay','Patrick Start','Kim Joy','John Spark'];
+   itemArray = ['Gather Requirements', 'UI Tesing', 'Deploy Application','Coding/Implementation', 'QA Testing','SIT','UAT','Training','Go live','Post Golive Support'];
 
   generateConfig(): Config {
     const iterations = 16;
@@ -36,7 +38,7 @@ export class DetailsPageComponent implements OnInit {
         const id = GSTC.api.GSTCID(i.toString());
         rows[id] = {
           id,
-          label: 'Staff ' + i,
+          label: i<= 10? this.staffArray[i] : this.staffArray[Math.random() *(8-3)+3] ,
           parentId: withParent ? GSTC.api.GSTCID((i - 1).toString()) : undefined,
           expanded: false,
         };
@@ -51,7 +53,7 @@ export class DetailsPageComponent implements OnInit {
       start = start.add(1,'day');
       items[id] = {
         id,
-        label: 'User id ' + i,
+        label:  i<= 10? this.itemArray[i] : this.itemArray[Math.random() *(8-3)+3],
         time: {
           start: start.valueOf(),
           end: start.add((Math.random() * (5-1)),'day').valueOf(),
